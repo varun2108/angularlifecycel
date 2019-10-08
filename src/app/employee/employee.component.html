@@ -1,0 +1,23 @@
+<p>employee works!</p>
+<table class="table">
+    <thead>
+      <th>EmployeeID</th>
+      <th>EmployeeName</th>
+      <th>EmployeeSalary</th>
+      <th>EmployeeCity</th>
+      <th>select</th>
+    </thead>
+  <tbody>
+    <tr *ngFor="let emp of employees" >
+      <td>{{emp.id}}</td>
+      <td>{{emp.name}}</td>
+      <td>{{emp.salary}}</td>
+      <td>{{emp.city}}</td>
+      <td>
+        <a [routerLink]="['/view-detail',emp.id]">ViewDetail</a>
+        <button (click)="deleteemployee(emp.id)" class="btn btn-danger">Delete</button>
+
+      </td>
+    </tr>
+  </tbody>
+  </table>
