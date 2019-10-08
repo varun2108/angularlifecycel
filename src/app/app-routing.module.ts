@@ -1,3 +1,4 @@
+import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { EmployeesupportComponent } from './employeesupport/employeesupport.component';
 import { CustomersupportComponent } from './customersupport/customersupport.component';
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path:'' , redirectTo:"/home", pathMatch: "full"},
 { path: 'home', component:HomeComponent},
 { path: 'about', component:AboutComponent},
+
 { path: 'support', component:SupportComponent,
   children: [
     { path: 'customersupport', component: CustomersupportComponent },
@@ -21,9 +23,12 @@ const routes: Routes = [
   ]
 },
 { path: 'employee', component:EmployeeComponent},
+{ path: 'addemployee', component:AddEmployeeComponent},
 { path: 'view-detail/:id', component:EmployeedetailComponent},
 { path: "**", component: PageNotFoundComponent}
+
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

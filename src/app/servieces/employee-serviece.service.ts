@@ -22,4 +22,12 @@ export class EmployeeServieceService {
       employees.splice(employeeindex,1);
     })
   }
+  addemployees(employee: Employee): void{
+    this.getEmployees().then(employees=>{
+      let maxIndex = employees.length-1;
+      let employeeWithMaxIndex = employees[maxIndex];
+      employee.id = employeeWithMaxIndex.id + 1;
+      employees.push(employee);
+    })
+  }
 }

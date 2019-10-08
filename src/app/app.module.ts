@@ -4,7 +4,7 @@ import { SampleService } from './servieces/sample.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-
+import{ FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { MylifeComponent } from './mylife/mylife.component';
 import { Dataserviece } from './servieces/data.serveiece';
@@ -21,6 +21,7 @@ import { CustomersupportComponent } from './customersupport/customersupport.comp
 import { EmployeesupportComponent } from './employeesupport/employeesupport.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { EmployeedetailComponent } from './employeedetail/employeedetail.component';
+import { AddEmployeeComponent } from './add-employee/add-employee.component';
 
 
 
@@ -39,12 +40,15 @@ import { EmployeedetailComponent } from './employeedetail/employeedetail.compone
     CustomersupportComponent,
     EmployeesupportComponent,
     EmployeeComponent,
-    EmployeedetailComponent
+    EmployeedetailComponent,
+    AddEmployeeComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [Dataserviece, SampleService, EmployeeServieceService],
   bootstrap: [IndexComponent]
